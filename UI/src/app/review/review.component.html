@@ -1,0 +1,30 @@
+<div class="review-container">
+  <h2 class="review-heading">Please review your order details</h2>
+
+  <table mat-table [dataSource]="transactions" class="mat-elevation-z8 custom-table">
+    <ng-container matColumnDef="item">
+      <th mat-header-cell *matHeaderCellDef> Item </th>
+      <td mat-cell *matCellDef="let element"> {{element.item}}</td>
+      <td mat-footer-cell *matFooterCellDef> Total </td>
+    </ng-container>
+    <ng-container matColumnDef="cost">
+      <th mat-header-cell *matHeaderCellDef> Quantity </th>
+      <td mat-cell *matCellDef="let element"> {{element.cost}} </td>
+      <td mat-footer-cell *matFooterCellDef> {{getTotalCost()}} </td>
+    </ng-container>
+    <ng-container matColumnDef="delete">
+      <th mat-header-cell *matHeaderCellDef> Delete </th>
+      <td mat-cell *matCellDef="let element;let i = index" class="deleteLink" (click)="deleteRecord(i)">  {{element.delete}} </td>
+      <td mat-footer-cell *matFooterCellDef></td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    <tr mat-footer-row *matFooterRowDef="displayedColumns"></tr>
+  </table>
+
+  <div class="review-btn">
+    <button type="button" class="check-out-btn" (click)="proceed()">Proceed</button>
+    <button type="button" class="check-out-btn" (click)="addItem()">Add item</button>
+  </div>
+</div>

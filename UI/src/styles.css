@@ -1,0 +1,53 @@
+/* You can add global styles to this file, and also import other style files */
+body,html,p,h1,h2,h3,h4,*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    position: relative;
+}
+html,body{
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+app-login{
+display: block;
+height: calc(100% - 120px);
+background-color: #f8f8f8;
+}
+
+.check-out-btn{
+    float: right;
+    background-color: red;
+    color: #fff;
+    font-weight: bold;
+    margin: 10px;
+    font-size: 16px;
+    width: 10%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: none;
+    outline: none;
+}
+/*dialog*/
+
+.custom-dialog .mat-dialog-title {
+    background-color: #0e5a9d;
+    padding: 5px 15px;
+    border-radius: 4px;
+    color: #ffffff;
+    margin: 5px;
+    font-size: 18px;
+}
+
+.custom-dialog .mat-dialog-container {
+    padding: 0;
+    margin: 0;
+}
+
+.custom-dialog .mat-dialog-content {
+    margin: 0;
+    padding: 0 20px;
+}

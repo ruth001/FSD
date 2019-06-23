@@ -1,0 +1,6 @@
+<div class="header">
+  <h1 class="headerText" [ngClass]="{'headerLeft':username}">{{title}}</h1>
+  <ul class="navbar-right" [hidden]="!username">
+    <li>Welcome {{username}} <span  (click)="logOut()">Log out</span></li>
+  </ul>
+</div>

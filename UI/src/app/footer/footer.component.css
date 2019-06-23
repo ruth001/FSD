@@ -1,0 +1,13 @@
+.footer{
+    width: 100%;
+    text-align: center;
+    background-color: #282c34;
+    height: 60px;
+    color: white;
+    position: absolute;
+    bottom: 0;
+}
+.footerText{
+    font-weight: 600px;
+    padding:10px;
+}

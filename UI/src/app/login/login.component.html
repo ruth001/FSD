@@ -1,0 +1,27 @@
+<div class="login">
+  <div class="loginContent">
+  <h2 class="loginTitle">Login Form</h2>
+  <form #loginForm="ngForm">
+    <div class="form-group">
+      <input type="text" class="form-control" id="name" required [(ngModel)]="model.name"  name="username"
+               #username="ngModel">
+      <label for="name" [ngClass]="{'align-top':model['name']}">User Name</label>
+      <div [hidden]="username.valid || username.pristine"
+             class="alert alert-danger">
+          User name is required
+        </div>
+    </div>
+
+    <div class="form-group">
+      <input type="text" class="form-control" id="alterEgo" type="password" required [(ngModel)]="model.password" name="password" #password="ngModel">
+      <label for="alterEgo" [ngClass]="{'align-top':model['password']}">Password</label>
+      <div [hidden]="password.valid || password.pristine"
+             class="alert alert-danger">
+         Password is required
+        </div>
+    </div>
+
+    <button class="btn btn-success" (click)="onLoginSubmit()">Login</button>
+  </form>
+  <div>
+</div>

@@ -1,0 +1,23 @@
+.main{
+    height: 100%;
+}
+.header{
+    width: 100%;
+    background-color: #282c34;
+    height: 60px;
+    color: white
+}
+.headerText{
+    font-weight: 600px;
+    padding:10px;
+    display: inline-block;
+    margin-left: 42%;
+    -webkit-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
+}
+.headerLeft{
+    font-size: 20px;
+    margin-left: 0px;
+    text-align: left;
+    padding-top: 20px;
+}
